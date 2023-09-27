@@ -1,30 +1,11 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <link href="https://vjs.zencdn.net/8.5.2/video-js.css" rel="stylesheet" />
-</head>
-
-<body>
-  <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    width="640"
-    height="264"
-    poster="MY_VIDEO_POSTER.jpg"
-    data-setup="{}"
-  >
-    <source src="https://online-edu-media.dopingtech.net/education/_definst_/smil:amazons3/education/content/e0f2b97e-cbba-42c7-b8a1-b55fc2b3071d/e0f2b97e-cbba-42c7-b8a1-b55fc2b3071d.smil/playlist.m3u8?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vb25saW5lLWVkdS1tZWRpYS5kb3Bpbmd0ZWNoLm5ldC9lZHVjYXRpb24vX2RlZmluc3RfL3NtaWw6YW1hem9uczMvZWR1Y2F0aW9uL2NvbnRlbnQvZTBmMmI5N2UtY2JiYS00MmM3LWI4YTEtYjU1ZmMyYjMwNzFkLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2OTU4NTIyMjl9fX1dfQ__&Signature=ukFLqB0EQBX1S5o-bvQgr2Xm9FYYnuKv~3vQPmrwGbB1gZME1OW3Bwf7zpLz8EfFTzYfEMGkUv~wm1GYF1uPqyd5jV0yUXBHY~SsSNIpfdKD8F8VioDaRc9hEO7u1aVy~W3SMSBByqi0wA53vFnO2EoManxar~LAJ8ju5BMmmQVeCazCRyXUz82Nop2gtSRPdOeijqT-7KK4asG-VHMblUjusrpKflBB~eVLgEgctcf5Aw3gGzbNlBwjOs2MktmXBt8UhHCSnCFktDMEYZpw9ve-YWwwBcSUVA8ITmphb8opsnl8fFbD~FPlQYFstWpTf3e066jC7SOuxQfNctErOQ__&Key-Pair-Id=K2DZVUWQMGE4BV" type="application/x-mpegURL" />
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-
-  <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
-</body>
-</html>
+<video-js id=vid1 width=600 height=300 class="vjs-default-skin" controls>
+  <source
+     src="https://online-edu-media.dopingtech.net/education/_definst_/smil:amazons3/education/content/3bf43851-f2b4-4883-bff5-f3512ab1eab6/3bf43851-f2b4-4883-bff5-f3512ab1eab6.smil/playlist.m3u8?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vb25saW5lLWVkdS1tZWRpYS5kb3Bpbmd0ZWNoLm5ldC9lZHVjYXRpb24vX2RlZmluc3RfL3NtaWw6YW1hem9uczMvZWR1Y2F0aW9uL2NvbnRlbnQvM2JmNDM4NTEtZjJiNC00ODgzLWJmZjUtZjM1MTJhYjFlYWI2LyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2OTU4NTIwMjR9fX1dfQ__&Signature=AYv6otaznXsovLfDgvP2UK34aRIaa9yzFaYJ2cbvv5IkEEXNOxuWjraMdt3Dryka2QtrRI~3I~5WQw3K41mphimQLGqG61g40wHnpUm-n6beEe3lrYYN5PK~KveNYuBo8PumVrDrXKhbPhyI-q~X6jTKT0AXI1cqTLlKEf4YIomeHC209FzcbbJpPQIhVCUSrp9qKXapSYufIq60p1tAHvkFXpqVK~x7bh5kccGFf6f1vYXQ0MlcvLUkFkBf9fTMy9VqUVgIWjYUeSXfVPzV0BvX4L1aovrZ3hJt71MIDGz7wwOxZO2Tc7wdJ8x3~6eSFIck4AsygU5pzbTtJGrkJw__&Key-Pair-Id=K2DZVUWQMGE4BV"
+     type="application/x-mpegURL">
+</video-js>
+<script src="video.js"></script>
+<script src="videojs-http-streaming.min.js"></script>
+<script>
+var player = videojs('vid1');
+player.play();
+</script>
