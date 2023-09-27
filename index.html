@@ -9,16 +9,16 @@
 <body>
 <video autoplay controls id="player"
        class="video-js">
-  <source src="https://teacher-plus-assets.dopingtech.net/academy/mesleki-tukenmislik/media.m3u8?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vdGVhY2hlci1wbHVzLWFzc2V0cy5kb3Bpbmd0ZWNoLm5ldC9hY2FkZW15LyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2OTU4NTE3MjN9fX1dfQ__&Signature=plI56Iein7fpPoHmGvsXijelP21k9LbRdmhFe-NaPX5hoCG-iua94Tr780-wUUk2ythJtlNlYCpb~TwGeRx~FjAjEFeMgtF8aDmoxH8SMx5-VpZFnbsrSJTTa6S7pYDxi21iAAzLYEVPtUkuIrgljL93yNUL0ViJsMguB5Nmop7GBC0upYsctmMNwWJ1RYwMwhIwTvlFwcacxhPDrUQ4ofoPw15uqUALtMdHFCH~mbZLbZjbSYJor8C8TUedPrwve0QHaxetJ8gspEUT3ds0Ey~Hx17EpqZjazv2Y7MhGCc8tsHNCUmHgbdSJmfS492HHVQ3UIjXmN00K7h-Alws4A__&Key-Pair-Id=K26XGBWYZ98HJ0" type="application/x-mpegURL">
+  <source type="application/x-mpegURL">
 </video>
 
 <script src="https://vjs.zencdn.net/7.4.1/video.js"></script>
 <!-- ^^ video.js script ^^ -->
 <script type="text/javascript">
-  var headers = videojs.Hls.xhr.headers || {}
-  headers['X-Arbitrary'] = 'some-arbitrary-header-text'
-  videojs.Hls.xhr.headers = headers
-  var player = videojs('player')
+videojs.Hls.xhr.beforeSend = request => {
+request.uri = https://teacher-plus-assets.dopingtech.net/academy/mesleki-tukenmislik/media.m3u8?Policy=eyJTdGF0ZW1lbnQiOiBbeyJSZXNvdXJjZSI6Imh0dHBzOi8vdGVhY2hlci1wbHVzLWFzc2V0cy5kb3Bpbmd0ZWNoLm5ldC9hY2FkZW15LyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2OTU4NTE3MjN9fX1dfQ__&Signature=plI56Iein7fpPoHmGvsXijelP21k9LbRdmhFe-NaPX5hoCG-iua94Tr780-wUUk2ythJtlNlYCpb~TwGeRx~FjAjEFeMgtF8aDmoxH8SMx5-VpZFnbsrSJTTa6S7pYDxi21iAAzLYEVPtUkuIrgljL93yNUL0ViJsMguB5Nmop7GBC0upYsctmMNwWJ1RYwMwhIwTvlFwcacxhPDrUQ4ofoPw15uqUALtMdHFCH~mbZLbZjbSYJor8C8TUedPrwve0QHaxetJ8gspEUT3ds0Ey~Hx17EpqZjazv2Y7MhGCc8tsHNCUmHgbdSJmfS492HHVQ3UIjXmN00K7h-Alws4A__&Key-Pair-Id=K26XGBWYZ98HJ0
+}
+var player = videojs('player')
 </script>
 </body>
 </html>
